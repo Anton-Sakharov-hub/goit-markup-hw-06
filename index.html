@@ -64,52 +64,7 @@
       <!-- Секция Герой -->
       <section class="hero-scn">
         <h1 class="hero-title">эффективные решения для вашего бизнеса</h1>
-        <button href="" class="button">Заказать услугу</button>
-        <form action="" class="form">
-          <b class="form-header">Оставьте свои данные, мы вам перезвоним</b>
-
-          <div class="input-wrap">
-            <input class="form-input" type="text" id="name" name="name" placeholder=" ">
-            <label for="name" class="input-label">Имя</label>
-            <svg class="icon-input" width="12" height="12">
-              <use href="./images-web-studio/sprite.svg#icon-name"></use>
-            </svg>
-          </div>
-
-          <div class="input-wrap">
-            <input class="form-input" type="text" id="tel" name="tel" placeholder=" ">
-            <label for="tel" class="input-label">Телефон</label>
-            <svg class="icon-input" width="12" height="12">
-              <use href="./images-web-studio/sprite.svg#icon-tel"></use>
-            </svg>
-          </div>
-
-          <div class="input-wrap">
-            <input class="form-input" type="text" id="mail" name="mail" placeholder=" ">
-            <label for="mail" class="input-label">Почта</label>
-            <svg class="icon-input" width="12" height="12">
-              <use href="./images-web-studio/sprite.svg#icon-mail"></use>
-            </svg>
-          </div>
-
-          <textarea class="feedback" name="feedback" id="feedback" cols="30" rows="10" placeholder="Комметарий"></textarea>
-
-          <div class="form-agreement">
-            <input class="checkbox" type="checkbox" name="agreement" id="agreement">
-            <svg class="checkbox-icon" width="15" height="15">
-              <use href="./images-web-studio/sprite.svg#icon-chekbox"></use>
-            </svg>
-            <label for="agreement">Согласен с рассылкой и принимаю <a href="">Условия договора</a></label>
-          </div>
-
-          <button type="submit" class="form-button">Отправить</button>
-
-          <button type="" class="closing-button">
-            <svg class="closing-icon" width="11" height="11">
-              <use href="./images-web-studio/sprite.svg#closing-icon"></use>
-            </svg>
-          </button>
-        </form>
+        <button class="button" data-open-modal>Заказать услугу</button>
       </section>
 
       <!-- Секция преимущества -->
@@ -521,7 +476,7 @@
             <p class="footer-number">+38 099 111 11 11</p>
           </address>
         </div>
-        <div class="footer-call-cntr">
+        <div class="footer-call-container">
           <b class="footer-call">присоединяйтесь</b>
           <ul class="footer-social-networks ut-list">
             <li>
@@ -578,20 +533,92 @@
             </li>
           </ul>
         </div>
-        <div class="mailling-cntr">
-          <b class="mailling">Подпишитесь на рассылку</b>
-          <button class="mailling-button">
-            Подписаться
-            <svg class="icon-send" width="25" height="25">
-              <use  href="./images-web-studio/sprite.svg#icon-send"></use>
-            </svg>
-          </button>
+        <div class="mailling-container">
+          <label class="mailling-label" for="mailling-form">Подпишитесь на рассылку</label>
+          <div class="mailling-form-wrap">
+            <input class="mailling-form" type="email" name="email" id="mailling-form" placeholder="E-mail">
+            <button class="mailling-button">
+              Подписаться
+              <svg class="icon-send" width="25" height="25">
+                <use href="./images-web-studio/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
       <div class="copyrights-container">
         <p class="copyrights">2020 | Developed by GoIT Students</p>
       </div>
     </footer>
-    <script src="./js/modal.js"></script>
+
+    <!---------------------------- Модальное окно -------------------------------------------->
+    <div class="backdrop is-hidden" data-backdrop>
+      <form action="" class="form">
+        <b class="form-header">Оставьте свои данные, мы вам перезвоним</b>
+    
+        <div class="input-wrap">
+          <input class="form-input" type="text" id="name" name="name" placeholder=" ">
+          <label for="name" class="input-label">Имя</label>
+          <svg class="icon-input" width="12" height="12">
+            <use href="./images-web-studio/sprite.svg#icon-name"></use>
+          </svg>
+        </div>
+    
+        <div class="input-wrap">
+          <input class="form-input" type="text" id="tel" name="tel" placeholder=" ">
+          <label for="tel" class="input-label">Телефон</label>
+          <svg class="icon-input" width="12" height="12">
+            <use href="./images-web-studio/sprite.svg#icon-tel"></use>
+          </svg>
+        </div>
+    
+        <div class="input-wrap">
+          <input class="form-input" type="text" id="mail" name="mail" placeholder=" ">
+          <label for="mail" class="input-label">Почта</label>
+          <svg class="icon-input" width="12" height="12">
+            <use href="./images-web-studio/sprite.svg#icon-mail"></use>
+          </svg>
+        </div>
+    
+        <textarea class="feedback" name="feedback" id="feedback" cols="30" rows="10" placeholder="Комметарий"></textarea>
+    
+        <div class="form-agreement">
+          <input class="checkbox" type="checkbox" name="agreement" id="agreement">
+          <svg class="checkbox-icon" width="15" height="15">
+            <use href="./images-web-studio/sprite.svg#icon-chekbox"></use>
+          </svg>
+          <label for="agreement">Согласен с рассылкой и принимаю <a href="">Условия договора</a></label>
+        </div>
+    
+        <button type="submit" class="form-button">Отправить</button>
+    
+        <button type="" class="closing-button" data-close-modal>
+          <svg class="closing-icon" width="11" height="11">
+            <use href="./images-web-studio/sprite.svg#closing-icon"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+    <!-- <script src="./js/modal.js"></script> -->
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector("[data-open-modal]"),
+        closeModalBtn: document.querySelector("[data-close-modal]"),
+        backdrop: document.querySelector("[data-backdrop]"),
+      };
+
+      refs.openModalBtn.addEventListener("click", toggleModal);
+      refs.closeModalBtn.addEventListener("click", toggleModal);
+
+      refs.backdrop.addEventListener("click", logBackdropClick);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle("is-hidden");
+      }
+
+      function logBackdropClick() {
+        console.log("Это клик в бекдроп");
+      }
+    </script>
   </body>
 </html>
