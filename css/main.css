@@ -381,6 +381,7 @@ img {
 }
 
 .checkbox:checked + .checkbox-icon {
+  background-origin: border-box;
   background-color: var(--accent-color);
   fill: #fff;
   /* border: none; */
