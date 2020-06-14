@@ -383,13 +383,14 @@ img {
 .checkbox:checked + .checkbox-icon {
   background-origin: border-box;
   background-color: var(--accent-color);
+  border-color: transparent;
   fill: #fff;
   /* border: none; */
 }
 
-.checkbox:checked + .checkbox-icon > use {
+/* .checkbox:checked + .checkbox-icon > use {
   background-origin: border-box;
-}
+} */
 
 .form-button {
   width: 200px;
