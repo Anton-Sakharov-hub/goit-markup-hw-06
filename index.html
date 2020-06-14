@@ -64,26 +64,48 @@
       <!-- Секция Герой -->
       <section class="hero-scn">
         <h1 class="hero-title">эффективные решения для вашего бизнеса</h1>
-        <a href="" class="button">Заказать услугу</a>
-        <form action="">
+        <button href="" class="button">Заказать услугу</button>
+        <form action="" class="form">
           <b class="form-header">Оставьте свои данные, мы вам перезвоним</b>
 
-          <Имя for="name">Имя</label>
-          <input type="text" id="name" name="name">
+          <div class="input-wrap">
+            <input class="form-input" type="text" id="name" name="name" placeholder=" ">
+            <label for="name" class="input-label">Имя</label>
+            <svg class="icon-input" width="12" height="12">
+              <use href="./images-web-studio/sprite.svg#icon-name"></use>
+            </svg>
+          </div>
 
-          <label for="tel">Телефон</label>
-          <input type="text" id="tel" name="tel">
+          <div class="input-wrap">
+            <input class="form-input" type="text" id="tel" name="tel" placeholder=" ">
+            <label for="tel" class="input-label">Телефон</label>
+            <svg class="icon-input" width="12" height="12">
+              <use href="./images-web-studio/sprite.svg#icon-tel"></use>
+            </svg>
+          </div>
 
-          <label for="mail">Почта</label>
-          <input type="text" id="mail" name="mail">
+          <div class="input-wrap">
+            <input class="form-input" type="text" id="mail" name="mail" placeholder=" ">
+            <label for="mail" class="input-label">Почта</label>
+            <svg class="icon-input" width="12" height="12">
+              <use href="./images-web-studio/sprite.svg#icon-mail"></use>
+            </svg>
+          </div>
 
-          <label for="feedback">Комментарий</label>
-          <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
+          <textarea class="feedback" name="feedback" id="feedback" cols="30" rows="10" placeholder="Комметарий"></textarea>
 
-          <label for="agreement">Согласен с рассылкой и принимаю <a href="">Условия договора</a></label>
-          <input type="checkbox" name="agreement" id="agreement">
+          <div class="form-agreement">
+            <input class="checkbox" type="checkbox" name="agreement" id="agreement">
+            <label for="agreement">Согласен с рассылкой и принимаю <a href="">Условия договора</a></label>
+          </div>
 
-          <button type="submit"></button>
+          <button type="submit" class="form-button">Отправить</button>
+
+          <button type="" class="closing-button">
+            <svg class="closing-icon" width="11" height="11">
+              <use href="./images-web-studio/sprite.svg#closing-icon"></use>
+            </svg>
+          </button>
         </form>
       </section>
 

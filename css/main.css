@@ -247,11 +247,167 @@ img {
   color: var(--main-white-color);
   background-color: var(--accent-color);
 
-  text-decoration: none;
+  border-style: none;
   font-weight: bold;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+}
+
+/* ----------------------------- Форма ----------------------------*/
+
+.form {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  width: 528px;
+  padding: 40px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: var(--main-text-color);
+
+  background-color: var(--main-white-color);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.form-header {
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+
+  color: var(--title-text-color);
+}
+
+.input-wrap {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.form-input {
+  width: 100%;
+  margin: 0;
+  padding: 12px 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  -webkit-appearance: none;
+}
+
+.form-input:focus {
+  border: 5px solid var(--accent-color);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.icon-input {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+
+  transform: translateY(-50%);
+  fill: currentColor;
+}
+
+.input-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus + .input-label {
+  transform: translate(-42px, -38px);
+
+  color: var(--accent-color);
+}
+
+.form-input:focus ~ .icon-input {
+  fill: var(--accent-color);
+}
+
+.form-input:not(:placeholder-shown) + .input-label {
+  transform: translate(-42px, -38px);
+}
+
+.feedback {
+  margin-bottom: 30px;
+  padding: 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+}
+
+.form-agreement {
+  display: flex;
+  margin-bottom: 30px;
+
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.form-agreement input[checkbox] {
+  width: 20px;
+}
+
+.form-agreement a {
+  color: var(--accent-color);
+}
+
+.checkbox {
+  -webkit-appearance: none;
+}
+
+.form-button {
+  width: 200px;
+  height: 50px;
+  padding: 10px 55px;
+  margin-left: auto;
+  margin-right: auto;
+
+  color: var(--main-white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  border-style: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+}
+
+.closing-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 25px;
+  border-style: none;
+  background-color: var(--main-white-color);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.closing-button:hover svg {
+  fill: var(--accent-color);
 }
 
 /*--------------------------- Секция преимущества -----------------------*/
