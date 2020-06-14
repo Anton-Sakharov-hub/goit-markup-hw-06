@@ -302,10 +302,10 @@ img {
   -webkit-appearance: none;
 }
 
-.form-input:focus {
-  border: 5px solid var(--accent-color);
-  appearance: none;
-  -webkit-appearance: none;
+.form-input:focus,
+.feedback:focus {
+  border: 1px solid var(--accent-color);
+  outline: none;
 }
 
 .icon-input {
@@ -350,22 +350,44 @@ img {
 
 .form-agreement {
   display: flex;
+  align-items: center;
   margin-bottom: 30px;
 
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
-.form-agreement input[checkbox] {
-  width: 20px;
-}
-
 .form-agreement a {
   color: var(--accent-color);
 }
 
-.checkbox {
-  -webkit-appearance: none;
+/* .checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  padding: 0px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} */
+
+.checkbox-icon {
+  margin-right: 8px;
+
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+  fill: transparent;
+}
+
+.checkbox:checked + .checkbox-icon {
+  background-color: var(--accent-color);
+  fill: #fff;
+  /* border: none; */
+}
+
+.checkbox:checked + .checkbox-icon > use {
+  background-origin: border-box;
 }
 
 .form-button {
